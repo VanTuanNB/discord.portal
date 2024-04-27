@@ -7,6 +7,7 @@ export default function Home() {
     return (
         <main className={styles.main}>
             <p>API_ENDPOINT: {environment.apiEndpoint || 'Not load env'}</p>
+            <p>ENV: {JSON.stringify(environment) || 'Not loa '}</p>
 
             <div className={styles.description}>
                 <p>
