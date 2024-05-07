@@ -4,7 +4,11 @@ const __dirname = path.resolve();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    logging: process.env.NODE_ENV === 'development',
+    logging: {
+        fetches: {
+            fullUrl: process.env.NODE_ENV === 'development',
+        },
+    },
     sassOptions: {
         includePaths: [path.join(__dirname, 'global')],
     },
