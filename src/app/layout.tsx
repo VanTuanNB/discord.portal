@@ -1,7 +1,7 @@
-import { environment } from '@/core/configs/environment.config';
+import AppProviderComponent from '@/views/layouts/app.component';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import './globals.scss';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,10 +15,9 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    console.log('environment', environment);
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>{<AppProviderComponent>{children}</AppProviderComponent>}</body>
         </html>
     );
 }

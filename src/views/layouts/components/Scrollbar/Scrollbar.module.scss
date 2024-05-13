@@ -1,0 +1,49 @@
+.wrapper-scrollbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 12px 0;
+    background-color: var(--scrollbar-bg-color);
+
+    .nav-list {
+        margin-left: 0;
+        padding-left: 0;
+
+        .nav-item {
+            .nav-menu {
+                width: 48px;
+                height: 48px;
+                background-color: var(--primary-bg-color);
+                color: var(--text-normal);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--primary-bg-color);
+                border-radius: 50%;
+                transition: all ease-in 0.2s;
+                cursor: pointer;
+
+                .logo {
+                    fill: var(--text-normal);
+                }
+
+                &.selected {
+                    border-radius: 16px;
+                    background-color: var(--primary-color);
+                    color: #fff;
+                }
+
+                &:hover {
+                    border-radius: 16px;
+                    background-color: var(--primary-color);
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .separate {
+        margin: 8px 0;
+    }
+}
