@@ -15,12 +15,6 @@
         display: flex;
         align-items: flex-start;
 
-        .side-bar {
-            width: 240px;
-            height: 100vh;
-            background-color: red;
-        }
-
         .central {
             width: calc(100% - 240px);
             height: 100vh;

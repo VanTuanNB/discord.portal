@@ -17,6 +17,14 @@ const nextConfig = {
         NEXT_PUBLIC_STATIC_ENDPOINT: process.env.STATIC_ENDPOINT,
         NEXT_PUBLIC_PREFIX_API_ENDPOINT: process.env.PREFIX_ENDPOINT,
     },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'i0.wp.com',
+            },
+        ],
+    },
     async headers() {
         return [
             {
