@@ -11,6 +11,27 @@
         padding-left: 0;
 
         .nav-item {
+            margin-top: 8px;
+
+            &:first-child {
+                margin-top: unset;
+            }
+
+            &.selected {
+                .nav-menu {
+                    border-radius: 16px;
+                    background-color: var(--primary-color);
+                    color: #fff;
+
+                    &:has(.thumbnail) {
+                        background-color: unset;
+
+                        .thumbnail {
+                            border-radius: 16px;
+                        }
+                    }
+                }
+            }
             .nav-menu {
                 width: 48px;
                 height: 48px;
@@ -22,22 +43,31 @@
                 background-color: var(--primary-bg-color);
                 border-radius: 50%;
                 transition: all ease-in 0.2s;
+
                 cursor: pointer;
 
                 .logo {
                     fill: var(--text-normal);
                 }
 
-                &.selected {
-                    border-radius: 16px;
-                    background-color: var(--primary-color);
-                    color: #fff;
+                .thumbnail {
+                    border-radius: 50%;
+                    transition: all ease-in 0.2s;
                 }
 
                 &:hover {
                     border-radius: 16px;
                     background-color: var(--primary-color);
                     color: #fff;
+                }
+
+                &:has(.thumbnail):hover {
+                    border-radius: 16px;
+                    background-color: unset;
+
+                    .thumbnail {
+                        border-radius: 16px;
+                    }
                 }
             }
         }
